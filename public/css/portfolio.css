@@ -1,0 +1,229 @@
+/*--- BALANCE ----------------------------------------------------------------------------------*/
+#balance ,#transactions{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--trasparenc);
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px 0 20px 0;
+    border: 1px solid var(--box_border);
+}
+
+#transactions{
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#balance span{font-size: 1.5rem;}
+
+.balance_usd {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.balance_usd h1 , .balance_usd p{
+    font-size: 1rem;
+    margin: 5px;
+    font-family: var(--roboto);
+    color: var(--box_border);
+}
+.balace_text ,.asset_moviment , .data_moviment , .importo_moviment,.quantita_moviment , .type_moviment{
+    font-size: 0.75rem;
+    font-family: var(--mono);
+    color: black;
+    text-align: center;
+}
+/* --- PORTFOLIO -------------------------------------------------------------------------------------*/
+#portfolio {
+    margin: 20px 0 20px 0 ;
+    background-color: var(--trasparenc);
+}
+
+#bar ,#bar_moviments{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--button);
+    color: whitesmoke;
+    font-family: var(--roboto);
+    font-size: 0.75rem;
+    border: 1px solid var(--box_border);
+}
+
+.box ,.box_moviment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--box_border);
+    padding: 5px;
+    font-size: 1rem;
+    font-family: var(--roboto);
+    font-weight: bold;
+    color: var(--box_border);
+}
+
+.aux{width: 40px;}
+.box img {
+    width: 40px;
+    height: 40px;
+}
+.asset {width: 100px;}
+.box .asset{font-size: 0.75rem; color: gray;}
+.quantita,.value_usd,.price{width: 110px; text-align: end;}
+
+.box_button , .aux_b{width: 60px;}
+
+.box_button{
+    height: 30px;
+    border: 1px solid var(--box_border);
+    border-radius: 20px;
+    background-color: var(--button);
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+.box_button:hover{background-color: var(--button_hover);}
+
+.msg_empty{
+    height: 50px;
+    padding: 10px;
+    font-size: 2rerm;
+    font-family: var(--roboto);
+    color: black;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .value_usd,.price{display: none;}
+    #bar .value_usd,.quantita,#bar .price{ text-align: center;}
+    .box_button , .aux{margin-left: 10px;}
+}
+
+/*--- MENU ------------------------------------------------------------------------------------------*/
+
+.menu{
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background: url(../img/box.jpg) center;
+    background-size: cover;
+    border: 5px solid var(--button);
+    border-radius: 20px;
+}
+.menu img{
+    width: 40px;
+    height: 40px;
+    margin: 0px 10px 0px 10px;
+}
+
+.row ,.row_0{
+    margin: 5px 0 5px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.row_0{margin: 0;}
+
+.word{
+    margin-left: 10px;
+    font-size: 1rem;
+    font-family: var(--mono);
+    font-weight:lighter;
+    color: var(--button);
+    width: 180px;
+}
+
+.close_menu{
+    color: red;
+    cursor: pointer;
+}
+
+.value_word,.close_menu , .row input, .price_shop , .valore_shop , .saldo_shop{ 
+    width: 100px;
+    font-size: 1rem;
+    font-family: var(--serif);
+    font-weight: bold;
+    text-align: end;
+    margin-left: 5px;
+}
+
+.row input{width: 130px;}
+.close_menu{margin: 0;}
+.close_menu:hover{font-size: 1.5rem;}
+
+.button_shop{
+    cursor: pointer;
+    margin: 0 10% 0 10% ;
+    width: 60%;
+    border: 1px solid var(--box_border);
+    background-color: var(--button);
+    border-radius: 20px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.button_shop:hover{background-color: var(--button_hover);}
+
+.id_crypto{
+    font-size: 1rem;
+    font-family: var(--serif);
+    font-weight: bold;
+}
+
+#shop_msg ,.N_B{    
+    width: 100%;
+    text-align: center;
+    color: var(--box_border);
+    font-size: 0.85rem;
+    font-family: var(--serif);
+    font-weight: bold;
+}
+/*-- TRANSACTIONS ----------------*/
+
+#button_moviments{cursor: pointer;
+    background-color: gold;
+    color: black;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    border:1px solid var(--box_border);
+    font-family: var(--mono)
+}
+
+#profitt{
+    font-family: var(--mono);
+    font-weight: bold;
+    font-size: 1rem;
+}
+#P_L{font-size: 1rem;}
+@media (max-width: 600px){
+    #button_moviments , #profitt{font-size: 0.8rem;}
+}
+
+.green{color:  rgb(2, 189, 2);}
+.red{color: red;}
+
+/*---- MOVIMENT -------------------------------------------------------*/
+
+#moviment {
+    background-color: var(--trasparenc);
+    margin-top: -20px;
+}
+#showAll { 
+    text-align: center;
+    color:  var(--button); 
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: var(--serif);
+}
+#showAll:hover{
+    color: var(--button_hover);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.asset_moviment{  width: 100px; text-align: center;}
+.data_moviment{   width: 142px; text-align: center;}
+.importo_moviment{width: 100px; text-align: center;}
+.tipo_moviment{width: 60px; text-align: center;}
+.quantita_moviment{width: 120px; text-align: center;}

@@ -1,0 +1,157 @@
+html{font-size: 18px;}
+body{
+    margin:0;
+    background: url(../img/sfondo.jpg) center;
+    background-size: cover;
+}
+
+/*------------------------------------------------
+----- HEADER -------------------------------------
+------------------------------------------------*/
+header{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    background: url(../img/sfondo2.jpg) center;
+    background-size: cover;
+    height: 120px;
+    padding: 20px;
+}
+
+header h1{
+    font-size: 3rem;
+    color: var(--box_border);
+    font-family: var(--roboto);
+    font-weight: bold;
+}
+
+#profilo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#profilo img{
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--box_border);
+    border-radius: 100%;
+}
+#profilo h1{
+    font-size: 1rem;
+    font-family: var(--mono);
+    font-style: oblique;
+    font-weight: bold;
+    color: var(--box_border);
+}
+
+header button {
+    font-size: 0.75rem;
+    font-family: var(--mono);
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: var(--button);
+    color: whitesmoke;
+    border: 1px solid var(--button_border);
+}
+header button:hover{ background-color: var(--button_hover); }
+
+/*------------------------------------------------
+----- nav ----------------------------------------
+------------------------------------------------*/
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--box_border);
+    height: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+nav a {
+    cursor: pointer;
+    color: whitesmoke;
+    font-size: 1rem;
+    font-family: var(--mono);
+    font-weight: lighter;
+    text-decoration: none;
+    padding: 5px 20px 5px 20px;
+}
+nav a:hover{
+    font-weight: bolder;
+    color:  var(--button);
+    border-bottom: 2px solid var(--button);
+}
+#here, #here:hover{ color: gold; border-bottom: 2px solid gold; cursor:unset;}
+/*------------------------------------------------
+----- SECTION ------------------------------------
+------------------------------------------------*/
+section{
+    min-height: 80vh;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/*------------------------------------------------
+----- FOOTER -------------------------------------
+------------------------------------------------*/
+footer {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(29,25,25);
+    color: whitesmoke;
+    font-size: 0.75rem;
+    font-family: var(--mono);
+    font-weight: bold;
+}
+/*------------------------------------------------
+----- MODAL -------------------------------------
+------------------------------------------------*/
+
+#modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#modal.hidden{display: none;}
+.hidden{display: none;}
+.no_scroll{ overflow: hidden;}
+/*------------------------------------------------
+----- MEDIA --------------------------------------
+------------------------------------------------*/
+/* provate su Redmi Note 7*/ 
+@media (max-width: 600px) {
+    html{ font-size: 15px;}
+    header h1 { font-size: 1.5rem;}
+    nav a {
+        max-width: 25% ;
+        font-size: 1rem;
+    }
+    footer{ font-size: 0.9rem; }
+    section{padding: 0 1% 0 1%;}
+}
+
+
+.load{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.load img{
+    width: 200px;
+}

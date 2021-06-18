@@ -1,0 +1,198 @@
+/*stile della pagina di login e di signup*/
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/sfondo2.jpg) center;
+    background-size: cover;
+}
+
+/*------------------------------------------------
+----- SECTION , HEADER , LOGIN OR SIGNUP ---------
+------------------------------------------------*/
+section{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    border: 2px solid var(--box_border);
+    border-radius: 20px;
+    
+}
+header{
+    width: 40%;
+    background: url(../img/sfondo.jpg) center;
+    border-radius: 20px 0 0 20px;
+    background-size: cover;
+    font-size: 2rem;
+    font-family: var(--roboto);
+    text-align:center;
+    font-weight: bold;
+    color:gold;
+}
+.login{
+    width: 60%;
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--trasparenc);
+    border-radius: 0 20px 20px 0;
+}
+header p {
+    text-align: start;
+    margin: 0 10px 0 10px;
+    padding: 10px;
+    color:black;
+    font-size: 1rem;
+    font-family: var(--serif);
+    background-color: rgba(255, 255, 255, 0.562);
+}
+.login h1 , p{
+    color: black; 
+    font-size: 2rem;
+    font-family: var(--serif);
+}
+
+p{font-size: 1rem;}
+
+a{  
+    font-family: var(--serif);
+    color: var(--button);
+    text-decoration: unset;
+    font-size: 1.5rem;
+    cursor: pointer;   
+}
+
+a:hover{
+    font-weight: bold;
+    color: var(--button_hover);
+}
+
+/*------------------------------------------------
+----- FORM ---------------------------------------
+------------------------------------------------*/
+form[name="login"],form[name="signup"]{
+    background-color: whitesmoke;
+    padding: 20px 50px 20px 50px;
+    border-radius: 20px;
+}
+
+form div{margin:2px;display: flex;justify-content: center;}
+
+label ,.label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 5px 0 5px 0;
+    font-size: 1rem;
+    color: var(--font_login);
+    font-family: var(--mono);
+    text-align: left;
+}
+
+label span{
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+input[type="submit"]{
+    cursor: pointer;
+    color: var(--font_login);
+    font-size: 1rem;
+    font-family: var(--mono);
+    font-weight: bold;
+    background-color: var(--button);
+    border-radius: 20px;
+    border: 0;
+    padding: 10px;
+}
+input[type="text"],input[type="password"]{
+    width: 100%;
+    border-radius: 20px;
+    border: 0;
+    padding: 2px;
+    text-align: center;
+    color: var(--button);
+    font-family: var(--serif);
+    font-size: 1rem;
+}
+input[type="file"]{
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    color: var(--button);
+    font-family: var(--serif);
+    font-size: 0.6rem;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 20px;
+}
+input[type="text"]:focus,input[type="password"]:focus{
+    outline: unset;
+    border: 1px solid var(--box_border);
+}
+
+input[type="submit"]:hover { background-color: var(--button_hover);color: white;}
+
+.err{background-color:var(--err);}
+/*tag mobule*/
+@media (max-width: 600px) {
+    html{font-size: 20px;}
+    section{flex-direction: column;}
+    .login{width: auto;}
+    header{width: auto;border-radius: 20px 20px 0 0;height: auto;font-size: 1.5rem;}
+}
+
+/*modal_error*/
+#modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#window_error{
+    width: 300px;
+    height: 150px;
+    border: 1px solid var(--box_border);
+    border-radius: 20px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#window_error h1{
+    text-align: center;
+    width: 80%;
+    height: 40%;
+    font-size: 1rem;
+    font-family: var(--mono);
+}
+#modal.hidden , .hidden{display: none;}
+
+#window_error button {  
+    font-family: var(--mono);  
+    font-weight: bold;
+    cursor: pointer;
+    width: 60px;
+    height: 25px;
+    border: 2px solid var(--box_border);
+    background-color: var(--button);
+    border-radius: 20px;
+}
+#window_error button:hover{
+    background-color: var(--button_hover);
+}
+
+.no_scroll{ overflow: hidden;}

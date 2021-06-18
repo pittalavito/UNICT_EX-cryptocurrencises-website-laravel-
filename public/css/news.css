@@ -1,0 +1,104 @@
+button.watchlist , button.search{
+    cursor: pointer;
+    background-color: gold;
+    color: black;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    border:1px solid var(--box_border);
+    font-family: var(--mono);
+}
+.division{
+    margin: 20px 0pc 20px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+input[name="search_news"]{
+    border-radius: 20px;
+    border: 0;
+    padding: 2px;
+    text-align: center;
+    color: var(--button);
+    font-family: var(--serif);
+    font-size: 1rem;
+    height: 30px;
+}
+input[name="search_news"]:focus{
+    outline: unset;
+    border: 1px solid var(--box_border);
+}
+.search{
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    justify-content: center;
+}
+.aux{display: flex; justify-content: flex-end;width: 100%;}
+.save , .delete{cursor: pointer;}
+
+#italian_news , #search_news ,#Saved_articles{
+    
+    margin: 10px 0px 10px 0px;
+    padding: 5px;
+    border:1px solid var(--box_border);
+    background-color: var(--trasparenc);  
+}
+
+#i_n , #s_n ,#s_a{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#italian_news h1 , #search_news h1 ,#Saved_articles h1{
+    font-size: 1.5rem;
+    font-family: var(--roboto);
+    font-style: oblique;
+    color: var(--box_border);
+    margin : 0 0 20px 0;
+}
+.box_n{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--box_border);
+    margin:5px;
+    padding: 5px;
+    background-color: rgba(0, 0, 255, 0.233);
+}
+.box_n img{width: 100%;border: 1px solid var(--box_border);}
+.box_n .title{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: var(--roboto);
+}
+.box_n .description{
+    font-size: 1rem;
+    font-family: var(--serif);
+    color: black;
+}
+.box_n a{
+    font-size: 1rem;
+    font-family: var(--mono);
+}
+
+#search_news .division button{
+    background-color:unset;
+    color: red;
+    border : unset;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+#search_news .division button:hover{
+    font-size: 2.5rem;
+}
+
+@media (max-width: 600px){
+    .num_w{display: none;}
+    button.watchlist{height: auto;}
+    #i_n , #s_n , #s_a{flex-wrap: unset;flex-direction: column;}
+    .box_n{width: auto;}
+}

@@ -1,0 +1,265 @@
+section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;    
+}
+
+/*---widget grafico total marcket cap-----------------------------------------------------------------------------*/
+#total_mc , #coin ,#watchlist ,#tmp_search{
+    margin: 10px 0px 10px 0px;
+    padding: 5px;
+    border:1px solid var(--box_border);
+    background-color: var(--trasparenc);   
+}
+#total_mc h1 {
+    font-size: 1rem;
+    font-family: var(--roboto);
+    font-weight: bold;
+    color: var(--button);
+    text-align: center;
+}
+#tradingview_7e10f      {height: 300px;}
+@media (max-width: 600px){#tradingview_7e10f {height: 150px;}}
+
+/*---coin------------------------------------------------------------*/
+#coin , #watchlist{background-color: var(--trasparenc);}
+#coin h1 ,#watchlist h1 , #tmp_search h1{
+    font-size: 1.1rem;
+    font-style: oblique;
+    font-weight: unset;
+    font-family: var(--roboto);
+    color: black;
+} 
+.coin_box ,.coin_bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--box_border);
+}
+
+.coin_box img,.img{
+    width: 30px;
+    height: 30px;
+    margin: 0px 2px 0px 2px;
+}
+
+.coin_box p ,.coin_bar p{
+    font-size: 1rem;
+    font-family: var(--serif);
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.symbol ,.rank{
+    color: gray;
+    font-weight: unset;
+}
+.rank    { width: 30px;}
+.name, .price { width: 105px;}
+.symbol, .var_day_green , .var_day_red , .var_day{ width: 90px;} 
+.price, .mk, .var_day_green , .var_day_red , .var_day{text-align: end;}
+.mk{width: 150px;}
+.like , .buy ,.unlike ,.chart{
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 0px 2px 0px 2px;
+    cursor: pointer;
+    text-align: center;
+}
+.like{color:goldenrod;font-size: 2rem;}
+
+.unlike{color: black;font-size: 2rem;}
+
+.like:hover ,  .unlike:hover{
+    font-size: 3rem;
+}
+.buy:hover ,.chart:hover{font-size: 2rem;}
+
+.op{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.coin_bar p {
+    color: var(--button);
+    font-weight: unset;
+}
+.var_day_green{color: rgb(2, 189, 2);}
+.var_day_red{color: red;}
+@media (max-width: 800px){
+    .mk , .rank ,.name{display: none;}
+    
+}
+
+button.watchlist , button.search{
+    cursor: pointer;
+    background-color: gold;
+    color: black;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    border:1px solid var(--box_border);
+    font-family: var(--mono);
+}
+.division{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[name="search_crypto"]{
+    border-radius: 20px;
+    border: 0;
+    padding: 2px;
+    text-align: center;
+    color: var(--button);
+    font-family: var(--serif);
+    font-size: 1rem;
+    height: 30px;
+}
+
+input[name="search_crypto"]:focus{
+    outline: unset;
+    border: 1px solid var(--box_border);
+}
+.search{
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    justify-content: center;
+}
+#tmp_search button{
+    background-color:unset;
+    color: red;
+    border : unset;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+#tmp_search button:hover{
+    font-size: 2.5rem;
+}
+@media (max-width: 600px){
+    .num_w{display: none;}
+}
+/*--elementi modale per grafico cripto------------------------------------*/
+.modal_c  { 
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.no_scroll{ overflow: hidden;}
+
+.box_c_modal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.box_c_modal img {
+    width: 50px;
+    height: 50px;
+}
+.box_c_modal p{
+    color: white;
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.box_c_modal h1 {
+    font-size: 1rem;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+.modal_c button{
+    background-color: black;
+    color: white;
+    border: 1px solid;
+    width: 100%;
+    cursor: pointer;
+}
+@media (max-width: 600px){
+    .box_c_modal p{font-size: 0.75rem;}
+    .modal_c{width: 80%;}
+}
+/*elementi modale per  buy crypto-----------------------------------------------------------*/
+.buy_box{
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background: url(../img/box.jpg) center;
+    background-size: cover;
+    border: 5px solid var(--button);
+    border-radius: 20px;
+}
+.buy_box img{
+    width: 40px;
+    height: 40px;
+    margin: 0px 10px 0px 10px;
+}
+.row ,.row_0{
+    margin: 5px 0 5px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.row_0{margin: 0;}
+
+.p_row{
+    margin-left: 10px;
+    font-size: 1rem;
+    font-family: var(--mono);
+    font-weight:lighter;
+    color: var(--button);
+    width: 180px;
+}
+.close_buy{
+    color: red;
+    cursor: pointer;
+}
+
+.balance , .current_price , .row input ,.close_buy{
+    width: 100px;
+    font-size: 1rem;
+    font-family: var(--serif);
+    font-weight: bold;
+    text-align: end;
+    margin-left: 5px;
+}
+.row input{width: 130px;}
+.close_buy{margin: 0;}
+.close_buy:hover{font-size: 1.5rem;}
+
+.button_buy{
+    cursor: pointer;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 1px solid var(--box_border);
+    background-color: var(--button);
+    border-radius: 20px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    width: 40%;
+}
+
+.button_buy:hover{background-color: var(--button_hover);}
+
+.id_crypto{
+    font-size: 1rem;
+    font-family: var(--serif);
+    font-weight: bold;
+}
+
+#buy_msg{    
+    text-align: center;
+    color: var(--box_border);
+    font-size: 1rem;
+    font-family: var(--serif);
+    font-weight: bold;
+}

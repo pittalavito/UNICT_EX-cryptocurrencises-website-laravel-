@@ -1,0 +1,16 @@
+html{font-size: 18px;}
+:root{
+    /*color global*/
+    --box_border:   rgba(29, 25, 25, 0.9);
+    --button_hover: rgb(255, 80, 80);
+    --button_border:whitesmoke;
+    --button:       rgb(99, 99, 245);
+    --font_login:   rgba(29, 25, 25, 0.9);
+    --err:          rgba(247, 2, 2, 0.397);
+    --trasparenc:   rgba(255, 255, 255, 0.781);
+    /*font family*/
+    --mono:          'Syne Mono', monospace;
+    --roboto:        'Roboto Slab', serif;                  
+    --serif:         'Source Sans Pro', sans-serif;
+}
+
